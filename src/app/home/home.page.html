@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-title  size="small">Recouvrement des Impayés</ion-title>
+
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card  button [routerLink]="['/facture']" >
+    <ion-card-header>
+           <ion-card-title> Chercher Factures <ion-img size="small" src="../../assets/icon/search.jpg"></ion-img> </ion-card-title>
+
+   </ion-card-header>
+  </ion-card>
+
+    <ion-card size="small" button   [routerLink]="['/historique-paiement']">
+      <ion-card-header>
+             <ion-card-title> Liste des Paiements  <ion-img size="small" src="../../assets/icon/paiement.png"></ion-img> </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+
+</ion-content>
+<ion-content>
+<div class="main_content_div">
+  <div class="user_div">
+    <div class="first_div">
+       <ion-label class="welcome">Welcome</ion-label>
+       <ion-label class="username">nour</ion-label>
+    </div>
+    <ion-icon name="person-circle-outline" color="dark" style="zoom:1.5;" ></ion-icon>  </div>
+
+  <div class="content_div animated bounceInUp" >
+    <ion-labe class="hello_lbl">Hello please choose your action</ion-labe>
+    <ion-grid fixed >
+      <ion-row>
+        <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects">
+          <div class="col_div">
+            <img src="{{item.img}}">
+            <ion-label>{{item.name}}</ion-label>
+          </div>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</div>
+
+</ion-content>
